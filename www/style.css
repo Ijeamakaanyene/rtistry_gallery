@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&display=swap');
+
+:root {
+  --text-font-family: 'Karla';
+  --text-font-base: sans-serif;
+  --base-weight: 300;
+  --heavy-weight: 400;
+  --font-size: 14px;
+  --font-color: #3C3C3C;
+  --red-color: #F54A4A
+}
+
+/* Setting base variables */
+* {
+  font-family: var(--text-font-family), var(--text-font-base);
+  font-size: var(--font-size);
+  font-weight: var(--base-weight);
+  color: var(--font-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 18px;
+  font-weight: var(--heavy-weight);
+}
+
+a {
+  font-size: 18px;
+  font-weight: var(--heavy-weight);
+}
+  
+hr {
+ border-top: 1px solid var(--red-color);
+}
+
+/* UPDATING NAV BAR */
+
+.navbar-default {
+  background-color: var(--white);
+}
+
+.navbar-nav {
+  float: right;
+}
+
+.navbar-brand {
+  height: 100px; 
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-weight: var(--heavy-weight);
+  bottom: 0;
+  color: var(--font-color);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .open > a:hover {
+  color: var(--red-color);
+  background-color: transparent;
+}
+
+/* Limiting width of app */
+.container-fluid {
+  max-width: 1057px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Changing border of select input */
+.selectize-control.single .selectize-input{
+  border: 1px solid var(--red-color);
+}
+
+/*
+label.control-label, .selectize-control.single{ 
+  display: table-cell; 
+  text-align: center; 
+  vertical-align: middle; 
+} 
+
+.form-group { 
+  display: table-row;
+}
+*/
+
