@@ -7,7 +7,8 @@
   --heavy-weight: 400;
   --font-size: 14px;
   --font-color: #3C3C3C;
-  --red-color: #F54A4A
+  --red-color: #F54A4A;
+  --white-color: #FFFFFF
 }
 
 /* Setting base variables */
@@ -27,15 +28,29 @@ a {
   font-size: 18px;
   font-weight: var(--heavy-weight);
 }
-  
+
 hr {
  border-top: 1px solid var(--red-color);
 }
 
-/* UPDATING NAV BAR */
 
+/* Changing colors of wellpanel */
+.well {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 0.5px solid #3C3C3C;
+}
+
+/* Artist Card CSS */
+
+.artist-link {
+  font-size: 16px;
+}
+
+
+/* UPDATING NAV BAR */
 .navbar-default {
-  background-color: var(--white);
+  background-color: var(--white-color);
 }
 
 .navbar-nav {
@@ -69,15 +84,4 @@ hr {
   border: 1px solid var(--red-color);
 }
 
-/*
-label.control-label, .selectize-control.single{ 
-  display: table-cell; 
-  text-align: center; 
-  vertical-align: middle; 
-} 
-
-.form-group { 
-  display: table-row;
-}
-*/
 
