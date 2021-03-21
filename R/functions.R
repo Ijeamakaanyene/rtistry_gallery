@@ -21,12 +21,12 @@ create_artist_card = function(username_handle,
                               link_to_profile,
                               profile_image_url){
   tags$div(
-    class = "col-sm-3",
+    class = "col-sm-4",
     tags$div(
-      class = "well",
-      tags$img(class = "inline img-responsive img-circle", src = profile_image_url),
-      tags$a(class = "inline", href = link_to_profile, h1(username_handle)),
-      tags$p(class = "inline", "aRt pieces: ", num_art)
+      class = "well artist-card",
+      tags$img(class = "img-responsive img-circle", style = "float:left", src = profile_image_url),
+      tags$a(class = "inline artist-link", style = "text-align: right", href = link_to_profile, h1(username_handle)),
+      tags$p(style = "text-align: right", "aRt pieces: ", num_art)
     )
   )
 }

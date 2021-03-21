@@ -37,14 +37,23 @@ hr {
 /* Changing colors of wellpanel */
 .well {
   background-color: transparent;
-  border-radius: 5px;
-  border: 0.5px solid #3C3C3C;
+  /*border-radius: 5px;
+  border: 0.5px solid #3C3C3C;*/
 }
 
 /* Artist Card CSS */
 
+.artist-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
 .artist-link {
   font-size: 16px;
+  color: var(--font-color);
+}
+
+.artist-link:hover {
+  color: var(--red-color);
 }
 
 
