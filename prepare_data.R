@@ -4,7 +4,8 @@ library(stringr)
 # Pull hand collected tweets!
 tweets = rio::import(here::here("data", "tweet_data.xlsx")) %>%
   mutate(username = str_extract_all(link, "https://twitter.com/\\w+"),
-         username = str_remove_all(username, "https://twitter.com/"))
+         username = str_remove_all(username, "https://twitter.com/")) %>%
+  unique()
 
 # Create username df
 username_info = tweets %>%
