@@ -24,9 +24,12 @@ create_artist_card = function(username_handle,
     class = "col-sm-4",
     tags$div(
       class = "well artist-card",
-      tags$img(class = "img-responsive img-circle", style = "float:left", src = profile_image_url),
-      tags$a(class = "inline artist-link", style = "text-align: right", href = link_to_profile, h1(username_handle)),
-      tags$p(style = "text-align: right", "aRt pieces: ", num_art)
-    )
+      tags$div(
+        tags$img(class = "img-responsive img-circle", style = "float:right", src = profile_image_url),
+        tags$a(class = "artist-link", style = "text-align: left", href = link_to_profile, h4(username_handle)),
+        tags$p(style = "text-align: left", "aRt pieces: ", num_art)
+        )
+      )
   )
 }
+
