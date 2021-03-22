@@ -5,10 +5,10 @@
   --text-font-base: sans-serif;
   --base-weight: 300;
   --heavy-weight: 400;
-  --font-size: 14px;
+  --font-size: 16px;
   --font-color: #3C3C3C;
   --red-color: #F54A4A;
-  --white-color: #FFFFFF
+  --white-color: #FFFFFF;
 }
 
 /* Setting base variables */
@@ -20,7 +20,6 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 18px;
   font-weight: var(--heavy-weight);
 }
 
@@ -37,23 +36,30 @@ hr {
 /* Changing colors of wellpanel */
 .well {
   background-color: transparent;
-  /*border-radius: 5px;
-  border: 0.5px solid #3C3C3C;*/
 }
 
-/* Artist Card CSS */
 
+/* Artist Card CSS */
 .artist-card {
+  border-radius: 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .artist-link {
   font-size: 16px;
   color: var(--font-color);
+  text-decoration: none;
 }
 
-.artist-link:hover {
+.artist-link:hover, .artist-link:active  {
   color: var(--red-color);
+}
+
+/* Picture Frame */
+.picture-frame {
+  border-radius: 0;
+  border: 5px solid black;
+  box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -86,11 +92,6 @@ hr {
   max-width: 1057px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Changing border of select input */
-.selectize-control.single .selectize-input{
-  border: 1px solid var(--red-color);
 }
 
 
