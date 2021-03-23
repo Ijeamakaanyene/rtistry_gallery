@@ -23,7 +23,8 @@ usernames = username_info %>%
 users_df = rtweet::lookup_users(usernames)
 
 user_image_url = users_df %>%
-  select(screen_name, profile_image_url)
+  select(screen_name, profile_image_url) %>%
+  mutate(profile_image_url = str_remove_all(profile_image_url, "_normal"))
 
 # Merge info back into username_info
 username_info_export = left_join(username_info, user_image_url,
