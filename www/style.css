@@ -33,7 +33,7 @@ hr {
 }
 
 
-/* Changing colors of wellpanel */
+/* Changing background colors of wellpanel */
 .well {
   background-color: transparent;
 }
@@ -42,23 +42,32 @@ hr {
 /* Artist Card CSS */
 .artist-card {
   border-radius: 0;
+  /*border: 1px solid black;*/
+  /*border-color: black;*/
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .artist-link {
-  font-size: 16px;
+  font-size: var(--font-size);
   color: var(--font-color);
   text-decoration: none;
 }
 
 .artist-link:hover, .artist-link:active  {
+  font-size: var(--font-size);
   color: var(--red-color);
 }
 
 /* Picture Frame */
 .picture-frame {
-  border-radius: 0;
-  border: 5px solid black;
+  border:solid 3vmin #3c322e;
+  border-bottom-color:#625a57;
+  border-left-color:#3c322e;
+  border-radius:2px;
+  border-right-color:#3c322e;
+  border-top-color:#4f4642;
+  /*border-radius: 0;
+  border: 5px solid black;*/
   box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.3);
 }
 
@@ -86,6 +95,8 @@ hr {
   color: var(--red-color);
   background-color: transparent;
 }
+
+/* Updating Footer */
 
 /* Limiting width of app */
 .container-fluid {
