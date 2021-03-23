@@ -26,8 +26,9 @@ create_artist_card = function(username_handle,
       class = "well artist-card",
       tags$div(
         tags$img(class = "img-responsive img-circle", style = "float:right", src = profile_image_url),
-        tags$a(class = "artist-link", style = "text-align: left", href = link_to_profile, h4(username_handle)),
-        tags$p(style = "text-align: left", "aRt pieces: ", num_art)
+        tags$p("Artist: ", style = "text-align: left", 
+               tags$a(class = "artist-link", href = link_to_profile, username_handle)),
+        tags$p(style = "text-align: left", "Collection: ", num_art, " pieces")
         )
       )
   )
