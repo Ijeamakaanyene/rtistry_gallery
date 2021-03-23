@@ -25,20 +25,20 @@ ui = tagList(
   
   ### About Panel
   tabPanel(
-    "about the gallery",
-    h2("ABOUT THE GALLERY"),
+    "ABOUT THE GALLERY",
+    h2("About the gallery"),
     hr(),
     p("rtistry art gallery is a shiny app celebrating and showcasing art in all its forms created by the #rstats community. This gallery features tweets posted using the #rtistry hashtag from January 1st, 2021 to March 20th, 2021."),
     br(),
     br(),
-    h2("FEATURED ARTISTS"),
+    h2("Featured artists"),
     hr(),
     # UI output featuring artists cards
     uiOutput("artist_card")),
   
   ### Twitter Collections
   tabPanel(
-    "collections",
+    "COLLECTIONS",
     id = "collections",
     column(
       width = 12,
@@ -48,7 +48,7 @@ ui = tagList(
       width = 5,
       tags$div(
         class = "well artist-card",
-        h3("SELECTED WORK"),
+        h3("Selected works"),
         p("Filter to specific aRtists of interests, or leave as all."),
         selectInput("filter", 
                     label = NULL,
@@ -68,8 +68,8 @@ ui = tagList(
         
       ),
   tabPanel(
-    "learn more",
-    h2("ABOUT THIS APP"),
+    "LEARN MORE",
+    h2("About this app"),
     hr(),
     column(
       width = 12,
