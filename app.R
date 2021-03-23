@@ -46,49 +46,47 @@ ui = tagList(
       ),
     column(
       width = 5,
-      tags$div(
-        class = "well artist-card",
+      wellPanel(
+        class = "artist-card",
         h3("Selected works"),
         p("Filter to specific aRtists of interests, or leave as all."),
         selectInput("filter", 
                     label = NULL,
-                  choices = c("All", pull_artists(tweet_data)),
-                  selected = "All"),
+                    choices = c("All", pull_artists(tweet_data)),
+                    selected = "All"),
         p("Click through to view all #rtistry pieces."),
         pageruiInput('pager', 1, nrow(tweet_data))
       )
     ),
     column(
       width = 7,
-      tags$div(
-        class = "well picture-frame",
-          uiOutput("tweet")
+      wellPanel(
+        class = "picture-frame",
+        uiOutput("tweet")
         )
-        )
-        
-      ),
+      )
+    ),
+  
   tabPanel(
     "LEARN MORE",
     h2("About this app"),
     hr(),
     column(
       width = 12,
-      tags$div(
-        class = "well artist-card",
+      wellPanel(
+        class = "artist-card",
         p("rtistry art gallery was made by Ijeamaka Anyene, ", 
           a(href = "https://twitter.com/ijeamaka_a", class = "artist-link", "@ijeamaka_a")), 
         p("The source code can be found on ", 
-          a(href = "https://github.com/Ijeamakaanyene/rtistry_gallery", class = "artist-link", "Github.")),
+          a(href = "https://github.com/Ijeamakaanyene/rtistry_gallery", class = "artist-link", "Github")),
         p("The design for this app was inspired by ",
-          a(href = "https://spoke-art.com/", class = "artist-link", "Spoke-Art gallery.")), 
+          a(href = "https://spoke-art.com/", class = "artist-link", "Spoke-Art gallery")), 
         p("The art gallery logo was created by Allison Horst, ",
-          a(href = "https://twitter.com/allison_horst", class = "artist-link", "@allison_horst."))
+          a(href = "https://twitter.com/allison_horst", class = "artist-link", "@allison_horst"))
       )
     )
-    
-  )
     )
-
+  )
 )
 
 
