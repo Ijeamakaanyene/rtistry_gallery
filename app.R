@@ -49,7 +49,7 @@ ui = tagList(
       wellPanel(
         class = "artist-card",
         h3("Selected works"),
-        p("Filter to specific aRtists of interests, or leave as all."),
+        p("Filter to specific aRtists of interest or leave as all."),
         selectInput("filter", 
                     label = NULL,
                     choices = c("All", pull_artists(tweet_data)),
