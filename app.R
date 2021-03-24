@@ -16,8 +16,8 @@ ui = tagList(
   
   ### Pulling in CSS stylesheet
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "style.css"),
-               ),
+    tags$link(rel = "stylesheet", type = "text/css", href = "style.css")
+    ),
   
   navbarPage(
     title = logo,
@@ -28,13 +28,17 @@ ui = tagList(
     "ABOUT THE GALLERY",
     h2("About the gallery"),
     hr(),
-    p("rtistry art gallery is a shiny app celebrating and showcasing art in all its forms created by the #rstats community. This gallery features tweets posted using the #rtistry hashtag from January 1st, 2021 to March 20th, 2021."),
+    p("rtistry art gallery is a shiny app celebrating and showcasing art in all its forms created by the #rstats community. This gallery features tweets posted using the #rtistry hashtag from January 1st, 2021 to March 31st, 2021."),
     br(),
     br(),
     h2("Featured artists"),
+    selectInput("artist_filter", label = NULL, 
+                choices = c("Artist (A-Z)" = "username", 
+                            "Pieces in Collections" = "num_art")),
     hr(),
     # UI output featuring artists cards
-    uiOutput("artist_card")),
+    uiOutput("artist_card")
+    ),
   
   ### Twitter Collections
   tabPanel(
@@ -50,7 +54,7 @@ ui = tagList(
         class = "artist-card",
         h3("Selected works"),
         p("Filter to specific aRtists of interest or leave as all."),
-        selectInput("filter", 
+        selectInput("collections_filter", 
                     label = NULL,
                     choices = c("All", pull_artists(tweet_data)),
                     selected = "All"),
@@ -96,14 +100,14 @@ server = function(input, output, session) {
   #### Collections
   # Filter the data
   filtered_tweet_data = reactive({
-    if(input$filter == "All"){
+    if(input$collections_filter == "All"){
       
       tweet_data 
       
     } else {
       
       tweet_data %>%
-        filter(username == input$filter)
+        filter(username == input$collections_filter)
     }
   })
   
@@ -119,7 +123,7 @@ server = function(input, output, session) {
   # Also this section is 100% from wleepang/shiny-pager-ui example
   observeEvent(
     eventExpr = {
-      c(input$collections, input$filter)
+      c(input$collections, input$collections_filter)
     },
     
     handlerExpr = {
@@ -149,9 +153,12 @@ server = function(input, output, session) {
   ### FEATURED ARTISTS
   # creates the output of the artist card
   output$artist_card = renderUI({
-    username_info %>%
-      select(-username) %>%
-      purrr::pmap(create_artist_card)
+    
+      username_info %>%
+        arrange(!!rlang::sym(input$artist_filter)) %>%
+        select(-username) %>%
+        purrr::pmap(create_artist_card)
+    
   })
   
   
