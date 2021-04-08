@@ -47,14 +47,22 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+.artist-gallery-card {
+    border: 5px ridge #3c322e;
+    border-radius: 1%;
+    background-image: url('art_bckgrnd_example.jpeg');
+    background-position: center;
+    background-size: cover; 
+}
+
 .artist-link {
-  font-size: var(--font-size);
+  font-size: 14px;
   color: var(--font-color);
   text-decoration: none;
 }
 
 .artist-link:hover, .artist-link:active  {
-  font-size: var(--font-size);
+  font-size: 14px;
   color: var(--red-color);
   text-decoration: none;
 }
@@ -67,8 +75,6 @@ hr {
   border-radius:2px;
   border-right-color:#3c322e;
   border-top-color:#4f4642;
-  /*border-radius: 0;
-  border: 5px solid black;*/
   box-shadow: 0 10px 7px -5px rgba(0, 0, 0, 0.3);
 }
 
@@ -104,5 +110,3 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
-
-
