@@ -20,19 +20,29 @@ create_artist_card = function(username_handle,
                               num_art, 
                               link_to_profile,
                               profile_image_url){
+  
+  artist_options = c("creative coder", "generative artist", 
+                     "digital artist", "algorithmic artist", 
+                     "computational artist")
+  
   tags$div(
     class = "col-sm-4",
     tags$div(
-      class = "well artist-card",
+      class = "well artist-gallery-card",
+      #style = "background-image: url('art_bckgrnd_example.jpeg')",
       tags$div(
-        tags$img(class = "img-responsive img-circle", style = "float:right; width:70px;", 
-                 src = profile_image_url),
-        tags$p("Artist: ", style = "text-align: left", 
-               tags$a(class = "artist-link", href = link_to_profile, username_handle)),
-        tags$p(style = "text-align: left", "Collection: ", num_art, 
+        tags$p(style = "text-align: center; margin: 0px 0px 5px;", 
+               tags$a(class = "artist-link", 
+                      style = "font-size: 20px",
+                      href = link_to_profile, username_handle)),
+        tags$p(style = "text-align: center; font-size: 16px; margin: 0px 0px;", sample(artist_options, 1)),
+        tags$p(style = "text-align: center; font-size: 14px;", 
+               "Collection: ", num_art, 
                ifelse(num_art == 1, " piece", "pieces"))
+        
         )
       )
   )
 }
+
 
