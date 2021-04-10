@@ -32,3 +32,5 @@ username_info_export = left_join(username_info, user_image_url,
 
 readr::write_rds(tweets, here::here("data", "tweet_data.rds"))
 readr::write_rds(username_info_export, here::here("data", "username_art.rds"))
+  
+  
