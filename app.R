@@ -79,14 +79,27 @@ ui = tagList(
       width = 12,
       wellPanel(
         class = "artist-card",
-        p("rtistry art gallery was made by Ijeamaka Anyene, ", 
-          a(href = "https://twitter.com/ijeamaka_a", class = "artist-link", "@ijeamaka_a")), 
+        style = "text-align: center",
+        p("rtistry art gallery was made by ", 
+          a(href = "https://ijeamaka-anyene.netlify.app/", 
+            class = "artist-link", 
+            style = "font-size: 16px",
+            "Ijeamaka Anyene")), 
         p("The source code can be found on ", 
-          a(href = "https://github.com/Ijeamakaanyene/rtistry_gallery", class = "artist-link", "Github")),
+          a(href = "https://github.com/Ijeamakaanyene/rtistry_gallery", 
+            class = "artist-link", 
+            style = "font-size: 16px",
+            "Github")),
         p("The design for this app was inspired by ",
-          a(href = "https://spoke-art.com/", class = "artist-link", "Spoke-Art gallery")), 
-        p("The art gallery logo was created by Allison Horst, ",
-          a(href = "https://twitter.com/allison_horst", class = "artist-link", "@allison_horst"))
+          a(href = "https://spoke-art.com/", 
+            class = "artist-link", 
+            style = "font-size: 16px",
+            "Spoke-Art gallery")), 
+        p("The art gallery logo was created by ",
+          a(href = "https://twitter.com/allison_horst", 
+            class = "artist-link", 
+            style = "font-size: 16px",
+            "Allison Horst"))
       )
     )
     )

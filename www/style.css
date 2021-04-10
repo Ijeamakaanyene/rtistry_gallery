@@ -50,9 +50,7 @@ hr {
 .artist-gallery-card {
     border: 5px ridge #3c322e;
     border-radius: 1%;
-    background-image: url('art_bckgrnd_example.jpeg');
-    background-position: center;
-    background-size: cover; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .artist-link {
