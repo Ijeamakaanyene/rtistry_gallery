@@ -11,6 +11,8 @@ pull_artists = function(tweets_data){
 create_tweet_card = function(username, link){
   tagList(
     tags$blockquote(class = "twitter-tweet",
+                    tags$img(src = "art_brush_loading.png", alt = "loading art", height = "75px"),
+                    "Art Loading. . .",
                     tags$a(href = link)),
     tags$script('twttr.widgets.load(document.getElementById("tweet"));')
   )
