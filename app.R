@@ -98,7 +98,7 @@ ui = tagList(
             class = "artist-link", 
             style = "font-size: 16px",
             "Allison Horst")),
-        p("Art brush loading icon is by Nociconist from the Noun Project")
+        p("Art brush loading icon is by Fernando Vasconcelos from the Noun Project")
       )
     )
     )
