@@ -1,7 +1,5 @@
 library(shiny)
-library(shinycssloaders)
 library(dplyr)
-library(reactable)
 library(shinyPagerUI)
 
 source(here::here("R", "functions.R"))
@@ -99,7 +97,8 @@ ui = tagList(
           a(href = "https://twitter.com/allison_horst", 
             class = "artist-link", 
             style = "font-size: 16px",
-            "Allison Horst"))
+            "Allison Horst")),
+        p("Art brush loading icon is by Fernando Vasconcelos from the Noun Project")
       )
     )
     )
